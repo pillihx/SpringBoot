@@ -1,0 +1,32 @@
+<div class="col-md-6 user-container">
+
+  <div class="btn-group">
+      <a href="list-user" class="btn btn-xs btn-info">Users</a>
+      <a href="list-car" class="btn btn-xs btn-primary">Cars</a>
+      <a href="logout" class="btn btn-xs btn-danger">Logout</a>
+  </div>
+  
+
+  <h2 style="margin: auto"> Car Details</h2>
+  <button class="btn btn-danger" style="width:100px" (click)="addCar()"> Add Car</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Color</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let car of cars">
+      <td class="hidden">{{car.id}}</td>
+      <td>{{car.marca}}</td>
+      <td>{{car.modelo}}</td>
+      <td>{{car.color}}</td>
+      <td><button class="btn btn-success" (click)="deleteCar(car)"> Delete</button>
+        <button class="btn btn-success" (click)="editCar(car)" style="margin-left: 20px;"> Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

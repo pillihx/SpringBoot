@@ -1,0 +1,21 @@
+<div class="col-md-6 user-container">
+  <h2 class="text-center">Add Car</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="marca">Car Brand:</label>
+      <input type="text" formControlName="marca" placeholder="Brand" name="marca" class="form-control" id="marca">
+    </div>
+
+    <div class="form-group">
+      <label for="modelo">Model:</label>
+      <input type="text" formControlName="modelo" placeholder="Model" name="modelo" class="form-control" id="modelo">
+    </div>
+
+    <div class="form-group">
+      <label for="color">Colour:</label>
+      <input formControlName="color" placeholder="Colour" name="color" class="form-control" id="color">
+    </div>
+
+    <button class="btn btn-success">Save</button>
+  </form>
+</div>
